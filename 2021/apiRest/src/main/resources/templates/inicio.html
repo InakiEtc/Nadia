@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title> datos </title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+
+  <body>
+
+    <button id="botonCsv" onclick="mostrarTablaCSV()"> datos de archivo .csv </button>
+    <button id="botonJSon" onclick="mostrarTablaJSON()"> datos de archivo .json </button>
+
+    <table id="informacionSolicitadaResidencias" class="table table-striped" style="display: none">
+      <tr>
+        <th>Provincia</th>
+        <th>Transitorias</th>
+        <th>Temporarias</th>
+        <th>Permanentes</th>
+        <th>Total</th>
+      </tr>
+    </table>
+
+    <table id="informacionSolicitadaProvincias" class="table table-striped" style="display: none">
+      <tr>
+        <th>Nombre Completo</th>
+        <th>Fuente</th>
+        <th>Iso ID</th>
+        <th>Nombre</th>
+        <th>ID</th>
+        <th>Categoria</th>
+        <th>Iso Nombre</th>
+        <th>Centroide</th>
+      </tr>
+    </table>
+
+    <script>
+
+      function mostrarTablaCSV(){
+
+        $("#botonCsv").hide();
+        $("#botonJSon").hide();
+
+        $.ajax({
+          url: "http://localhost:8080/api/datos/csv",
+          type: 'GET'
+        })
+                .done(function (data) {
+
+                  console.log(data);
+
+                  let datos = data.residencias;
+                  let contenido = "";
+                  for (var i = 0; i < datos.length; i++){
+                    contenido = "<tr>\n";
+                    contenido += "<td>" + datos[i].provincia + "</td>";
+                    contenido += "<td>" + datos[i].transitorias + "</td>";
+                    contenido += "<td>" + datos[i].temporarias + "</td>";
+                    contenido += "<td>" + datos[i].permanentes + "</td>";
+                    contenido += "<td>" + datos[i].total + "</td>";
+
+                    $("#informacionSolicitadaResidencias").append(contenido);
+                  }
+
+                  $("#informacionSolicitadaResidencias").show();
+
+
+                })
+                .fail(function () {
+                  console.log("error, no se pudo obtener datos");
+                });
+      }
+
+      function mostrarTablaJSON() {
+
+        $("#botonCsv").hide();
+        $("#botonJSon").hide();
+
+        $.ajax({
+          url: "http://localhost:8080/api/datos/json",
+          type: 'GET'
+        })
+                .done(function (data) {
+
+                  let datos = data.provincias;
+                  let contenido = "";
+                  for (var i = 0; i < datos.length; i++){
+                    contenido = "<tr>\n";
+                    contenido += "<td>" + datos[i].nombre_completo + "</td>";
+                    contenido += "<td>" + datos[i].fuente + "</td>";
+                    contenido += "<td>" + datos[i].iso_id + "</td>";
+                    contenido += "<td>" + datos[i].nombre + "</td>";
+                    contenido += "<td>" + datos[i].id + "</td>";
+                    contenido += "<td>" + datos[i].categoria + "</td>";
+                    contenido += "<td>" + datos[i].iso_nombre + "</td>";
+                    contenido += "<td>" + datos[i].centroide + "</td>";
+
+                    $("#informacionSolicitadaProvincias").append(contenido);
+                  }
+
+                  $("#informacionSolicitadaProvincias").show();
+
+                })
+                .fail(function () {
+                  console.log("error, no se pudo obtener datos");
+                });
+      }
+
+    </script>
+
+  </body>
+
+</html>
