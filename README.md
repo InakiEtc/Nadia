@@ -1,2 +1,2 @@
 # Trabajos Nadia 20/21
-![ensaladita](https://user-images.githubusercontent.com/64444050/116833279-c4c6ca00-ab8e-11eb-8d37-a4adcba23efc.jpg)
+![nickianime](https://user-images.githubusercontent.com/64444050/138363808-248b0778-b7a5-4201-a8b1-8d9a5cc62d00.jpg)
