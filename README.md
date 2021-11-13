@@ -1,2 +1,3 @@
-# Trabajos Nadia 20/21
-![pdm](https://user-images.githubusercontent.com/64444050/140532784-55cbe831-8b6f-42f8-82ea-9ff7b5b3efb8.jpg)
+# Taller de Soporte Informartico (Nadia 20/21)
+
+## [15 de Abril](https://github.com/InakiEtc/Nadia/tree/main/2021/TP1%20-%20ReadCsv)
