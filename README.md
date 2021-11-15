@@ -28,7 +28,7 @@
 - [21 de Octubre](https://github.com/InakiEtc/Nadia/tree/main/2021/TP9%20-%20TemperaturaMedia)
 
 ## TP10 - Comunas, Barrios, Casos
-- [28 de Octubre]()
+- [28 de Octubre](https://github.com/InakiEtc/Nadia/tree/main/2021/TP10%20-%20Comunas%2C%20Barrios%2C%20Casos)
 
 ## TP11 - Analisis Curso
 - [11 de Noviembre]()
