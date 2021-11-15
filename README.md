@@ -13,7 +13,7 @@
 - [12 de Agosto](https://github.com/InakiEtc/Nadia/tree/main/2021/TP4%20-%20LimpiarDatos)
 
 ## TP5 - Ejercicio Integrador
-- [26 de Agostos](https://github.com/InakiEtc/Nadia/tree/main/2021/TP5%20-%20LimpiarDatosIntegrador)
+- [26 de Agosto](https://github.com/InakiEtc/Nadia/tree/main/2021/TP5%20-%20LimpiarDatosIntegrador)
 
 ## TP6 - Scrapping
 - [16 de Septiembre](https://github.com/InakiEtc/Nadia/tree/main/2021/TP6%20-%20Scrapping)
