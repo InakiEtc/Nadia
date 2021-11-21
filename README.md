@@ -31,5 +31,5 @@
 - [28 de Octubre](https://github.com/InakiEtc/Nadia/tree/main/2021/TP10%20-%20Comunas%2C%20Barrios%2C%20Casos)
 
 ## TP11 - Analisis Curso
-- [11 de Noviembre]()
+- [11 de Noviembre](https://github.com/InakiEtc/Nadia/tree/main/2021/TP11%20-%20Analisis%20Curso)
 
